@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>Music Player</title>
+</head>
+
+<body>
+    <audio id="publicity">
+        <source src="./music/publicity.mp3" type="audio/mp3">
+    </audio>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="container">
+        <div class="title"><span class="first-word">Music</span> Player</div>
+        <div class="music-player-container">
+            <div class="music-title"><span class="artist">Coldplay</span> - <span class="song-title">Viva la vida</span></div>
+            <div class="controls">
+                <div id="previous-btn" class="control previous" title="Previous">
+                    <svg id="previous-icon" role="img" height="16" width="16" viewBox="0 0 16 16" class="icon"><path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"></path></svg>
+                </div>
+                <div id="play-pause-btn" class="control play-pause" title="Pause/Play">
+                    <svg id="play-pause-icon" role="img" height="16" width="16" viewBox="0 0 16 16" class="icon"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg>
+                    <svg id="play-pause-icon" role="img" height="16" width="16" viewBox="0 0 16 16" class="icon hide"><path fill="none" d="M0 0h16v16H0z"></path><path d="M3 2h3v12H3zm7 0h3v12h-3z"></path></svg>
+                </div>
+                <div id="next-btn" class="control next" title="Next">
+                    <svg id="next-icon" role="img" height="16" width="16" viewBox="0 0 16 16" class="icon"><path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z"></path></svg>
+                </div>
+            </div>
+
+            <div class="music-image">
+                <img id="music-cover" src="./images/Coldplay - Viva La Vida.jpg" />
+            </div>
+            
+            <audio id="audio" preload="auto">
+                <source src="./music/Coldplay - Viva La Vida.mp3" type="audio/wav">
+                <source src="./music/Coldplay - Viva La Vida.mp3" type="audio/mpeg">
+                <source src="./music/Coldplay - Viva La Vida.mp3" type="audio/ogg">
+            </audio>
+
+
+            <div class="progress-bar-container">
+                <div id="music-current-time" class="progress-bar-time">00:00</div>
+                <div id="progress-bar" class="progress-bar">
+                    <div class="progress-bar-bg">
+                        <div id="progress-bar-fg-container" class="progress-bar-fg-container">
+                            <div id="spinner" class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="music-duration" class="progress-bar-length">0:00</div>
+            </div>
+        </div>
+    </div>
+    <div class="glass-ui-notif-container">
+        <div class="text">Playing Next Song In <span class="time-to-start">5</span> Seconds</div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
